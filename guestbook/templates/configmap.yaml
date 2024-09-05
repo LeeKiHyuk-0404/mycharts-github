@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: guestbook-cm
+data:
+  MYSQL_ADDR: {{ .Values.database.ip }}
+  MYSQL_PORT: "{{ .Values.database.port }}"
+  MYSQL_DATABASE: {{ .Values.database.name }}
+  MYSQL_USER: {{ .Values.database.user }}
+  MYSQL_USER_PASSWORD: {{ .Values.database.password }}
